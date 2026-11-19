@@ -1,10 +1,14 @@
 // Shared settings for the map, charts and data pages.
 // This file loads first on each of those pages; everything here is a global.
 
+// Site root ("/" on dashboard.transitcenter.org, "/ted/" on transitcenter.github.io),
+// worked out from where this file was loaded so the same build works on both.
+const BASE_PATH = new URL("../../", document.currentScript.src).pathname;
+
 // Where download files (score/, dots/, transit/) are hosted.
 const FILES_BASE_URL = "https://transitcenter.github.io/ted-files";
 // Summary CSVs ship with this site because the charts page fetches them.
-const SUMMARY_BASE_URL = "/data/summary";
+const SUMMARY_BASE_URL = BASE_PATH + "data/summary";
 
 const regionKeys = ["BOS", "CHI", "LA", "NYC", "PHL", "SFO", "WAS"];
 const periods = ["WEDAM", "WEDPM", "SATAM"];

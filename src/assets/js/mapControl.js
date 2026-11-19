@@ -83,7 +83,7 @@ function updateURLParamsFromControlState() {
         window.location.hash = hash;
     }
     // Now update charts link accordingly also
-    var chartURL = new URL("/charts/", document.location)
+    var chartURL = new URL(BASE_PATH + "charts/", document.location)
     chartURL.searchParams.append("date", controlState["date"]);
     chartURL.searchParams.append("period", controlState["tod"]);
     chartURL.searchParams.append("opportunity", controlState["opportunity"]);

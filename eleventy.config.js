@@ -1,3 +1,4 @@
+import { HtmlBasePlugin } from "@11ty/eleventy";
 import { load as loadYaml } from "js-yaml";
 
 const MONTHS = ["January", "February", "March", "April", "May", "June", "July",
@@ -33,10 +34,14 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addFilter("activeOnly", (items) => (items || []).filter((i) => i.active));
 
+  // Rewrites root-relative href/src in the HTML when PATH_PREFIX is set (e.g. "/ted/" on github.io).
+  eleventyConfig.addPlugin(HtmlBasePlugin);
+
   eleventyConfig.watchIgnores.add("_site/assets/css/**");
 
   return {
     dir: { input: "src", output: "_site", includes: "_includes", data: "_data" },
+    pathPrefix: process.env.PATH_PREFIX || "/",
     templateFormats: ["njk"],
     htmlTemplateEngine: "njk",
   };

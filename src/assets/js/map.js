@@ -34,7 +34,7 @@ const map = new mapboxgl.Map({
 let version = document.querySelector('meta[name="version"]').content;
 // Add custom attribution controls
 map.addControl(new mapboxgl.AttributionControl({
-    customAttribution: "Proudly built by <a class='text-orange-kc' href='http://klumpentown.com'>klumpentown</a> | <a href='/changelog/'>" + version + "</a>"
+    customAttribution: "Proudly built by <a class='text-orange-kc' href='http://klumpentown.com'>klumpentown</a> | <a href='" + BASE_PATH + "changelog/'>" + version + "</a>"
 }))
 
 // Create a popup, but don't add it to the map yet.

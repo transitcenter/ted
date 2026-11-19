@@ -1,0 +1,10 @@
+# Alerts shown as a badge in the nav and at the top of the changelog page.
+# Set active: false to hide an alert without deleting it.
+#
+# - title: Data delay for Chicago
+#   date: 2025-06-20
+#   active: true
+#   description: |
+#     First line.
+#     Second line.
+[]

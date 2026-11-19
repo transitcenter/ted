@@ -1,0 +1,29 @@
+{
+  "name": "ted",
+  "version": "3.0.0",
+  "description": "TransitCenter Equity Dashboard (static site)",
+  "scripts": {
+    "build:css": "tailwindcss -i src/assets/css/input.css -o _site/assets/css/style.css --minify",
+    "build:site": "eleventy",
+    "build": "npm-run-all build:site build:css",
+    "watch:css": "tailwindcss -i src/assets/css/input.css -o _site/assets/css/style.css --watch",
+    "watch:site": "eleventy --serve",
+    "start": "npm-run-all --parallel watch:site watch:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/transitcenter/ted.git"
+  },
+  "bugs": {
+    "url": "https://github.com/transitcenter/ted/issues"
+  },
+  "homepage": "https://github.com/transitcenter/ted#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.8",
+    "js-yaml": "^5.5.0",
+    "npm-run-all2": "^9.0.4",
+    "tailwindcss": "^3.4.19"
+  },
+  "private": true,
+  "type": "module"
+}

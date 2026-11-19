@@ -1,0 +1,127 @@
+{% extends "base.njk" %}
+{% block title %} Home {% endblock %}
+{% block content %}
+<main>
+    <div class="mx-auto flex flex-col justify-center items-center">
+        <img class="w-full object-cover object-center rounded" alt="hero" src="/assets/img/cta-banner.jpg">
+    </div>
+    <section class="container mx-auto">
+        <div class="w-full flex flex-col mt-16 mb-10 items-center text-center">
+            <h1 class="title-font text-4xl mb-4 font-medium text-gray-900">
+                Tracking Equitable Transportation Access in US Cities</h1>
+            <p class="md:w-1/2 mb-8 leading-relaxed text-lg">We track access to
+                opportunities by public transit and driving for people living in
+                seven US cities. Use our maps, charts, or download pages to explore
+                data on transportation access and equity.</p>
+        </div>
+    </section>
+    <section class="container mx-auto mb-20">
+        <div class="grid gap-8 grid-cols-3">
+            <div
+                class="border-2 border-gray-200 bg-gray-100 rounded-lg items-center place-items-center justify-center flex flex-col p-10">
+                <div class="mt-6">
+                    <svg stroke="#481f89" fill="#481f89" class="w-24 h-24" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 576 512">
+                        <path
+                            d="M302.8 312C334.9 271.9 408 174.6 408 120C408 53.7 354.3 0 288 0S168 53.7 168 120c0 54.6 73.1 151.9 105.2 192c7.7 9.6 22 9.6 29.6 0zM416 503l144.9-58c9.1-3.6 15.1-12.5 15.1-22.3V152c0-17-17.1-28.6-32.9-22.3l-116 46.4c-.5 1.2-1 2.5-1.5 3.7c-2.9 6.8-6.1 13.7-9.6 20.6V503zM15.1 187.3C6 191 0 199.8 0 209.6V480.4c0 17 17.1 28.6 32.9 22.3L160 451.8V200.4c-3.5-6.9-6.7-13.8-9.6-20.6c-5.6-13.2-10.4-27.4-12.8-41.5l-122.6 49zM384 255c-20.5 31.3-42.3 59.6-56.2 77c-20.5 25.6-59.1 25.6-79.6 0c-13.9-17.4-35.7-45.7-56.2-77V449.4l192 54.9V255z" />
+                    </svg>
+                </div>
+                <div class="text-center mx-10">
+                    <h2 class="font-medium text-3xl text-gray-900 mt-6 mb-4">Maps</h2>
+                    <p class="leading-relaxed">Explore access to opportunity and other transit data on a map.</p>
+                    <a href="/map/"><button
+                            class="mt-10 text-md inline-flex text-white bg-blue-600 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-700 rounded text-lg">Visit
+                            Maps</button>
+                    </a>
+                </div>
+            </div>
+            <div
+                class="border-2 border-gray-200 bg-gray-100 rounded-lg items-center place-items-center justify-center flex flex-col p-10">
+                <div class="mt-6">
+                    <svg stroke="#481f89" fill="#481f89" class="w-24 h-24" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                        <path
+                            d="M160 80c0-26.5 21.5-48 48-48h32c26.5 0 48 21.5 48 48V432c0 26.5-21.5 48-48 48H208c-26.5 0-48-21.5-48-48V80zM0 272c0-26.5 21.5-48 48-48H80c26.5 0 48 21.5 48 48V432c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V272zM368 96h32c26.5 0 48 21.5 48 48V432c0 26.5-21.5 48-48 48H368c-26.5 0-48-21.5-48-48V144c0-26.5 21.5-48 48-48z" />
+                    </svg>
+                </div>
+                <div class="text-center mx-10">
+                    <h2 class="font-medium text-3xl text-gray-900 mt-6 mb-4">Charts</h2>
+                    <p class="leading-relaxed">Explore and compare distributive equity with interactive charts.</p>
+                    <a href="/charts/"><button
+                            class="mt-10 text-md inline-flex text-white bg-blue-600 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-700 rounded text-lg">Visit
+                            Charts</button>
+                    </a>
+                </div>
+
+            </div>
+            <div
+                class="border-2 border-gray-200 bg-gray-100 rounded-lg items-center place-items-center justify-center flex flex-col p-10">
+                <div class="mt-6">
+                    <svg stroke="#481f89" fill="#481f89" class="w-24 h-24" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                        <path
+                            d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z" />
+                    </svg>
+                </div>
+                <div class="text-center mx-10">
+                    <h2 class="font-medium text-3xl text-gray-900 mt-6 mb-4">Data</h2>
+                    <p class="leading-relaxed">Download our datasets and explore your own way.</p>
+                    <a href="/data/"><button
+                            class="mt-10 text-md inline-flex text-white bg-blue-600 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-700 rounded text-lg">Visit
+                            Downloads</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="mx-auto flex flex-col justify-center items-center">
+        <img class="w-full object-cover object-center rounded" alt="hero"
+            src="/assets/img/transit3-banner.jpg">
+    </div>
+    <section class="container mx-auto mb-20">
+        <div class="w-full flex flex-col px-20 mt-16 mb-16">
+            <h2 class="title-font text-4xl mb-4 font-medium text-gray-900">
+                The State of Transportation Equity</h1>
+                <p class="mb-8 leading-relaxed text-lg">Most of us want to live in communities where everyone can easily
+                    access plentiful opportunities. Public transit has the potential to provide us all with affordable,
+                    clean, and convenient access to home, work, school, health care, and other essentials of daily life.
+                </p>
+                <p class="mb-8 leading-relaxed text-lg">Yet, public transit service hasn't been a genuine lever of
+                    mobility for most Americans because it's been underfunded. Our elected officials - influenced by the
+                    auto and road-building industry - have chosen to invest in car-oriented infrastructure like highways
+                    and parking lots over transit. Typically, 80% of federal transportation dollars go to cars and 20%
+                    goes to public transit.
+                </p>
+                <p class="mb-8 leading-relaxed text-lg">Within transit itself, decision-makers disproportionately spend
+                    transit funding on service that better serves affluent white commuters than Black and brown people,
+                    people with limited means, people with disabilities, and others.
+                </p>
+                <p class="mb-8 leading-relaxed text-lg">As a result of both of these forces, most transit riders have
+                    dramatically lower access to opportunities than car riders. And transit riders of varying
+                    identities—like race, income, gender, and physical ability—have levels of access that don't
+                    necessarily match their needs. </p>
+
+                <p class="mb-8 leading-relaxed text-lg">The Transportation Equity Dashboard tracks access to
+                    opportunities for residents of seven US cities, visualizing how access by public transit changes
+                    over time as transit schedules change. To determine if access to opportunities is equitable in these
+                    cities, we track outcomes for people from different neighborhoods and demographic groups, traveling
+                    with different constraints and by different modes of transport. </p>
+
+                <p class="mb-8 leading-relaxed text-lg">To create transit systems that work for everyone, transit
+                    agencies and advocates must first understand how well people of varying identities can or can't
+                    access what they need to thrive. This dashboard establishes where and how to amend transportation
+                    policies and investments to eliminate disparities in access. Advocates can use this information to
+                    demand change from transportation decision-makers, and transit decision-makers can apply our data to
+                    implement solutions within their systems.
+                </p>
+                <p class="mb-8 leading-relaxed text-lg italic">Note: The dashboard does not measure every aspect of
+                    transportation equity — for example, safety on public transit for different groups of people or
+                    access to opportunities for someone using a mobility device. <a
+                        href="https://transitcenter.org/publications/">TransitCenter research</a> examines these
+                    and other elements of transportation equity.
+                </p>
+
+        </div>
+    </section>
+</main>
+{% endblock %}

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>TransitCenter Equity Dashboard</title>
+  <meta name="description" content="Map access to opportunity by transit and car in seven US cities.">
+  <meta name="version" content="Version {{ site.version }}" />
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="shortcut icon" type="image/png" href="/favicon.ico" />
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet">
+</head>
+
+<body class="min-h-screen bg-slate-50 bg-repeat">
+  <main>
+    <div class="absolute right-0 bottom-5 z-50">
+      <div class="p-2">
+        <a href="http://transitcenter.org"><img src="/assets/img/tc-logo.png" width="150px"></a>
+      </div>
+    </div>
+    <div class="absolute right-0 mr-3 top-3 z-50 bg-white rounded-lg border-2 text-xs">
+      <span class="inline-flex items-center rounded-l px-2 font-bold text-gray-600">
+        <label>Fly to:</label>
+      </span>
+      <div class="inline-flex rounded-md shadow-sm">
+        <button id="BOS" class="bg-white hover:bg-blue-100 text-purple-tc font-bold py-1 px-2 text-xs"
+          onclick="flyToClicked(this)">
+          BOS
+        </button>
+        <button id="CHI" class="bg-white hover:bg-blue-100 text-purple-tc font-bold py-1 px-2 text-xs"
+          onclick="flyToClicked(this)">
+          CHI
+        </button>
+        <button id="LA" class="bg-white hover:bg-blue-100 text-purple-tc font-bold py-1 px-2 text-xs"
+          onclick="flyToClicked(this)">
+          LA
+        </button>
+        <button id="NYC" class="bg-white hover:bg-blue-100 text-purple-tc font-bold py-1 px-2 text-xs"
+          onclick="flyToClicked(this)">
+          NYC
+        </button>
+        <button id="PHL" class="bg-white hover:bg-blue-100 text-purple-tc font-bold py-1 px-2 text-xs"
+          onclick="flyToClicked(this)">
+          PHL
+        </button>
+        <button id="SFO" class="bg-white hover:bg-blue-100 text-purple-tc font-bold py-1 px-2 text-xs"
+          onclick="flyToClicked(this)">
+          SF
+        </button>
+        <button id="WAS" class="bg-white hover:bg-blue-100 text-purple-tc font-bold py-1 px-2 rounded-r text-xs"
+          onclick="flyToClicked(this)">
+          DC
+        </button>
+      </div>
+    </div>
+    <div id="options"
+      class="w-1/4 md:w-1/3 xl:w-1/5 max-w-screen-md max-h-[90%] lg:max-h-[90%] absolute left-0 ml-3 mt-3 bg-white rounded-xl border-2 text-sm z-30 overflow-y-auto">
+      <div class="p-3 grid gap-y-1.5">
+        <div class="grid-cols-1">
+          <div>
+            <a href="/">
+              <h2 class="font-bold text-gray-600">TransitCenter Equity Dashboard</h2>
+            </a>
+          </div>
+          <nav class="md:ml-auto flex flex-wrap items-center text-base cursor-pointer">
+            <a class="mr-5 hover:text-gray-900 text-xs" href="/">Home</a>
+            <a id="charts-url" class="mr-5 hover:text-gray-900 text-xs" href="/charts/">Charts</a>
+            <a class="mr-5 hover:text-gray-900 text-xs" href="/data/">Data</a>
+            <a class="mr-5 hover:text-gray-900 text-xs" href="/about/">About</a>
+          </nav>
+        </div>
+        <div class="max-w-screen-md border-t pt-2">
+          <h2 class="font-bold">Customize This Map</h2>
+          <p class="text-xs">Explore patterns of access to opportunity by choosing different metrics.</p>
+          <!-- <p id="context" class="italic text-xs pt-1">Click or zoom to a city to see data.</p> -->
+        </div>
+        <div class="max-w-screen-md">
+          <label for="date" class="block mb-1 text-xs font-medium text-gray-900 ">Date</label>
+          <select id="date" , onchange="dateChanged(this)"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2">
+          </select>
+        </div>
+        <div>
+          <label for="opportunity" class="block mb-1 text-xs font-medium text-gray-900 ">Opportunity</label>
+          <select id="opportunity" onchange="opportunityChanged(this)"
+            class="bg-gray-50 border border-gray-2.300 text-gray-900 text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2">
+            <option value="C000" selected>Jobs</option>
+            <option value="acres">Park Space</option>
+            <option value="hospitals">Hospitals</option>
+            <option value="urgent_care_facilities">Urgent Care Facilities</option>
+            <option value="pharmacies">Pharmacies</option>
+            <option value="education">Colleges & Universities</option>
+            <option value="grocery">Supermarkets</option>
+            <option value="early_voting">Early Voting Locations</option>
+            <option value="tsi">Transit Service Intensity</option>
+          </select>
+        </div>
+        <div>
+          <label for="period" class="block mb-0.5 text-xs font-medium text-gray-900">Time Period</label>
+          <select id="period" onchange="periodChanged(this)"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2  ">
+            <option value="WEDAM" selected>Weekday Morning</option>
+            <option value="WEDPM">Weekday Evening</option>
+            <option value="SATAM">Saturday Morning</option>
+          </select>
+        </div>
+        <div>
+          <label for="tripOptions" class="block mb-0.5 text-xs font-medium text-gray-900">Trip
+            Options</label>
+          <select id="tripOptions" onchange="tripOptionChanged(this)"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2  ">
+            <option value="c30">30 minutes</option>
+            <option value="c45" selected>45 minutes</option>
+            <option value="c60">60 minutes</option>
+            <option value="c90">90 minutes</option>
+          </select>
+        </div>
+        <div>
+          <label for="affordableTrips" class="block mb-0.5 text-xs font-medium text-gray-900 ">Affordable
+            Trips</label>
+          <select id="affordableTrips" onchange="affordableTripsChanged(this)"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2  ">
+            <option value="all">All Trips</option>
+            <option value="2020">Affordable (2020)</option>
+            <option value="2023">Affordable (2023 where available)</option>
+          </select>
+        </div>
+        <div>
+          <label for="auto" class="relative inline-flex items-center cursor-pointer">
+            <input id="auto" type="checkbox" value="" class="sr-only peer" onchange="autoCompareChanged(this)">
+            <div
+              class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600">
+            </div>
+            <span class="ms-3 text-xs font-medium text-gray-900">Ratio of Transit to Auto
+              Access</span>
+          </label>
+        </div>
+        <div class="border-t border-t-dashed pt-2">
+          <label for="dots" class="block mb-0.5 text-xs font-medium text-gray-900">Demographics</label>
+          <select id="dots"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2  "
+            onchange="dotsChanged(this)">
+            <option value="none" selected>No Demographic Overlay</option>
+            <option value="B03002_001E">1 dot = 100 People</option>
+            <option value="B03002_006E">1 dot = 100 Asian people</option>
+            <option value="B03002_004E">1 dot = 100 Black people</option>
+            <option value="B03002_003E">1 dot = 100 White people</option>
+            <option value="B03002_012E">1 dot = 100 Hispanic or Latino people</option>
+            <option value="B11003_016E">1 dot = 50 Single mothers</option>
+            <option value="age_65p">1 dot = 100 Seniors (65+)</option>
+            <option value="low_income">1 dot = 100 Low-income people</option>
+            <option value="zero_car_hhld">1 dot = 100 Zero-car households</option>
+          </select>
+        </div>
+        <div class="mt-2">
+          <label class="relative inline-flex cursor-pointer">
+            <input id="transitLines" type="checkbox" value="" class="sr-only peer"
+              onchange="showTransitLinesChanged(this)">
+            <div
+              class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600">
+            </div>
+            <span class="ms-3 text-xs font-medium text-gray-900 ">Show Transit Lines</span>
+          </label>
+        </div>
+
+        <div class="pt-3 border-t border-t-dashed grid-cols-1 justify-center text-center">
+          <div class="w-full justify-center"><b id="legendTitle">Access to Jobs</b></div>
+          <div id="legendSubTitle" class="w-full justify-center text-xs"></div>
+          <div id="legend" class="flex w-full justify-center items-center"></div>
+          <div class="w-full justify-center text-xs text-gray-500 mt-1">Invalid zones are shown in gray</div>
+        </div>
+      </div>
+    </div>
+    <div class="min-h-screen absolute top-0 left-0 right-0 bottom-0 z-10" id="map"></div>
+  </main>
+
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+  <script src="/assets/js/config.js"></script>
+  <script src="/assets/js/d3.v7.min.js"></script>
+  <script src="/assets/js/regions.js"></script>
+  <script src="/assets/js/mapControl.js"></script>
+  <script src="/assets/js/styles.js"></script>
+  <script src="/assets/js/map.js"></script>
+</body>
+
+</html>

@@ -7,4 +7,27 @@
 #   description: |
 #     First line.
 #     Second line.
-[]
+
+- title: Boston Travel Times
+  date: '2024-06-24'
+  active: false
+  description: |-
+    Currently, Boston travel times to destinations are shortest for weekday evening travel (atypical). Job access is lower for weekday mornings, however.
+
+    We are currently investigating this issue.
+- title: Beta Version
+  date: '2024-06-10'
+  active: false
+  description: |-
+    The dashboard is currently in beta version. As a result, some elements may not work as intended, and the website is subject to change.
+
+    We plan to launch the stable version of the dashboard on June 17, 2024.
+- title: Fares Issue
+  date: '2024-06-08'
+  active: false
+  description: |-
+    On May 5, 2023 an error in the methods for calculating the fare matrices supporting low-cost fare comparisons was discovered. The error stems from the parallelization process used to improve calculation speed of itineraries in OpenTripPlanner. The result is that the fare matrices for origins and destinations may be inaccurate and random, and the resulting computations using those matrices are likely incorrect. The extent of the impact is currently unknown.
+
+    The extent of the impact is currently unknown. The issue may affect all low-cost fare data for each region and date. If you have cited or used the low-cost fare data previously, we cannot verify its accuracy.
+
+    A long-term fix is being implemented, however we can resolve this issue, we caution against using the fare-restricted metrics. If you have questions please contact dashboard@transitcenter.org with questions.

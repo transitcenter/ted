@@ -4,4 +4,28 @@
 #   date: 2025-06-20
 #   description: |
 #     What changed.
-[]
+
+- version: 3.0.0
+  date: '2026-11-19'
+  description: |-
+    The dashboard moves to a lightweight static site hosted on GitHub Pages. Maps, charts and data downloads are unchanged.
+
+    - Site rebuilt with Eleventy; content is now maintained in the open at github.com/transitcenter/ted
+
+    - Download files are now served from github.com/transitcenter/ted-files
+- version: 2.2.0
+  date: '2025-06-20'
+  description: Added data for the week of March 24, 2025, which is now the default date.
+- version: 2.1.0
+  date: '2024-08-14'
+  description: |-
+    Version 2.1 includes important data and visual updates.
+
+    - Added transit service intensity measures in the maps and charts
+
+    - Applied fare years appropriately to chart summaries (2023 for areas where 2023 fares exist and the year is 2023, 2020 otherwise)
+
+    - Visual updates to the maps and charts pages for sizing
+- version: 2.0.1
+  date: '2024-06-24'
+  description: Version 2.0.1 removes all dark mode settings and adds reference to a glossary.

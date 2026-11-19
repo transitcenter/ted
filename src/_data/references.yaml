@@ -1,28 +1,212 @@
 # Content for /references. Each list is sorted newest first on the page.
+# Fields: publications (title, date, url, description), media (title, publication, date, url),
+# industry (title, organization, date, url), academic (title, author, journal, year, url, description).
 
-# "TransitCenter Publications"
-publications: []
-#  - title: ...
-#    description: ...
-#    url: https://...
-#    date: 2025-01-01
+publications:
+  - title: 'Transit Access Stories: The State of Transportation Equity in Seven Cities'
+    date: '2024-08-01'
+    url: https://transitcenter.org/publication/transit-access-stories/
+    description: To create transit systems that work for everyone, transit agencies, and advocates must first understand how well people of varying identities can or can’t access what they need to thrive. These Transit Access Stories combine transportation access to opportunity data, quotes from riders, and other data sources to demonstrate how decisions from transportation leaders on service planning, policy, and funding impact how people can access their daily needs in seven US cities. Advocates can use this information to demand change from transportation decision-makers, and transit decision-makers can apply our data to implement solutions within their systems.
+  - title: Checking in on Washington DC’s Transit Recovery
+    date: '2023-02-16'
+    url: https://transitcenter.org/checking-in-on-washington-dcs-transit-recovery/
+    description: As part of our exploration into what our Equity Dashboard reveals about transit access in the seven highest ridership U.S. cities, this blog post takes a deeper look at Washington D.C. In this analysis, we focus primarily on the District itself, rather than the full DMV metropolitan region, to illuminate the particularly glaring disparities in access to opportunity via transit within the core city.
+  - title: What Does Our Equity Dashboard Reveal about Transit Access in Boston?
+    date: '2023-01-23'
+    url: https://transitcenter.org/what-does-our-equity-dashboard-reveal-about-transit-access-in-boston/
+    description: We evaluate how well Boston residents could access essential destinations like healthcare, jobs, and grocery stores via public transit from February 2020 (right before the pandemic hit) through early August 2022.
+  - title: 'Exploring 2022’s Big Transit Themes with New Equity Dashboard Data: Part Two'
+    date: '2022-12-21'
+    url: https://transitcenter.org/exploring-2022-transit-themes-with-equity-dashboard-data-part-two/
+    description: Part two looks at at the “new normal” service patterns emerging at three agencies – New York’s MTA, Philadelphia’s SEPTA, and SFMTA – and explores whether these agencies are closing access gaps, or lapsing back into longstanding inequities.
+  - title: 'Exploring 2022’s Big Transit Themes with New Equity Dashboard Data: Part One'
+    date: '2022-12-19'
+    url: https://transitcenter.org/exploring-2022s-big-transit-themes-with-new-equity-dashboard-data/
+    description: Part one of our 2022 summary, takes a look at how four agencies – Boston’s MBTA, DC’s WMATA, LA Metro, and Chicago’s CTA – responded to crises this year.
+  - title: LA’s Bus Network Redesign Hamstrung by Operator Shortfall
+    date: '2022-05-03'
+    url: https://transitcenter.org/the-unfulfilled-promise-of-nextgen/
+    description: We found that if LA Metro were able to fully implement the new NextGen bus network, transit riders across Los Angeles County would gain substantial access to essential destinations. Jobs, healthcare, and other places would become easier than ever to reach by public transit, even surpassing the pre-Covid-19 benchmark.
+  - title: 'High Frequency Podcast: Measuring Transit Equity in Six Cities'
+    date: '2021-08-12'
+    url: https://high-frequency.simplecast.com/episodes/s2-ep-6-mary-buchanan-ron-thompson-measuring-transit-equity-in-6-cities
+    description: In June, TransitCenter released the Transit Equity Dashboard. The dashboard uses maps and graphs to show how transit access varies by race, class, and other demographic factors in 6 major urban regions. TransitCenter Senior Research Associate Mary Buchanan explains the importance of access to opportunity metrics, and how these metrics can be used to measure equity. Mary also shares major findings from the dashboard, and explains how this type of data can bolster advocacy efforts for more equitable service.
+  - title: 'Going Above and Beyond: Advice to USDOT on Measuring Transportation Equity'
+    date: '2021-08-06'
+    url: https://transitcenter.org/going-above-and-beyond-advice-to-usdot-on-measuring-transportation-equity/
+    description: A look at how USDOT could better assess transport equity.
+  - title: Introducing the Transit Equity Dashboard
+    date: '2021-06-17'
+    url: https://transitcenter.org/introducing-the-transit-equity-dashboard/
+    description: This dashboard aims to help transit practitioners, policymakers, and advocates make more informed and equitable decisions by providing clear metrics about access disparities. By adopting these metrics, we can assess whether changes to transit networks close or widen these gaps.
+  - title: 'The State of Transit Equity: Metro Chicago'
+    date: '2021-06-01'
+    url: https://transitcenter.org/wp-content/uploads/2021/06/ChicagoFactSheet.pdf
+    description: A brief overview and fact sheet of the state of transit equity in Chicago
+  - title: 'The State of Transit Equity: Metro Los Angeles'
+    date: '2021-06-01'
+    url: https://transitcenter.org/wp-content/uploads/2021/06/LAFactSheet.pdf
+    description: A brief overview and fact sheet of the state of transit equity in Los Angeles
+  - title: 'The State of Transit Equity: Metro New York'
+    date: '2021-06-01'
+    url: https://transitcenter.org/wp-content/uploads/2021/06/NYCFactSheet.pdf
+    description: A brief overview and fact sheet on the state of transit equity in New York
+  - title: 'The State of Transit Equity: Metro Philadlephia'
+    date: '2021-06-01'
+    url: https://transitcenter.org/wp-content/uploads/2021/06/PhillyFactSheet.pdf
+    description: A brief overview and fact sheet on the state of transit equity in Philadlephia
+  - title: 'The State of Transit Equity: Metro SF Bay Area'
+    date: '2021-06-01'
+    url: https://transitcenter.org/wp-content/uploads/2021/06/BayAreaFactSheet.pdf
+    description: A brief overview and fact sheet on the state of transit equity in the San Francisco Bay Area
+  - title: 'The State of Transit Equity: Metro Washington DC'
+    date: '2021-06-01'
+    url: https://transitcenter.org/wp-content/uploads/2021/06/DCFactSheet.pdf
+    description: A brief overview and fact sheet on the state of transit equity in Washington DC
 
-media: []
-#  - title: ...
-#    publication: ...
-#    url: https://...
-#    date: 2025-01-01
+media:
+  - title: SEPTA bus overhaul will not exacerbate inequalities, new study says, despite critics' concerns
+    publication: Philadelphia Inquirer
+    date: '2024-04-11'
+    url: https://www.inquirer.com/transportation/septa-bus-revolution-equity-review-transitcenter-20240411.html
+  - title: MBTA's 'aggressive' year-long bus driver hiring campaign failed. Black and Hispanic riders are paying the price
+    publication: Boston Globe
+    date: '2023-01-26'
+    url: https://www.bostonglobe.com/2023/01/26/metro/mbtas-aggressive-year-long-bus-driver-hiring-campaign-failed-black-hispanic-riders-are-paying-price/
+  - title: Pandemic Cuts to Public Transit Persist in Major U.S. Cities
+    publication: Bloomberg
+    date: '2021-06-17'
+    url: https://www.bloomberg.com/news/articles/2021-06-17/where-pandemic-cuts-to-subways-and-buses-persist
+  - title: 'REPORT: Here’s Where People of Color Can’t Access Opportunity Without A Car'
+    publication: Streetsblog
+    date: '2021-06-17'
+    url: https://usa.streetsblog.org/2021/06/17/report-heres-where-people-of-color-cant-access-opportunity-without-a-car
 
-industry: []
-#  - title: ...
-#    organization: ...
-#    url: https://...
-#    date: 2025-01-01
+industry:
+  - title: 'Tracking Progress:  Deliver a Seamless Transit Network'
+    organization: SEPTA
+    date: '2024-05-23'
+    url: https://wwww.septa.org/tracking-progress/#section-3
+  - title: 'Victoria Transport Policy Institute: Evaluating Transportation Equity Guidance for Incorporating Distributional Impacts in Transport Planning'
+    organization: Victoria Transport Policy Institute
+    date: '2024-05-09'
+    url: https://www.vtpi.org/equity.pdf
+  - title: Transit is the Answer to improving equity
+    organization: Regional Transit Authority
+    date: '2022-12-15'
+    url: https://www.rtachicago.org/blog/2022/12/15/transit-is-the-answer-to-inequity
+  - title: Disrupting Structural Racism Increasing Transportation Equity in South Dallas
+    organization: Urban Institute
+    date: '2022-12-01'
+    url: https://www.urban.org/sites/default/files/2022-12/Disrupting%20Structural%20Racism.pdf
 
-academic: []
-#  - title: ...
-#    author: ...
-#    journal: ...
-#    year: 2024
-#    description: ...
-#    url: https://...
+academic:
+  - title: 'Transportation policy: a neglected social policy domain and aspect of social well-being in social policy/welfare regime research'
+    author: Chase Harms
+    journal: PhD Thesis, University of Manitoba
+    year: 2024
+    url: https://mspace.lib.umanitoba.ca/items/c8b4a19a-a4e2-42ab-8700-a4d12595e61b
+    description: |-
+      Mobility plays a decidedly central role in the life of virtually every human in our world. Being able to move from one point to another is absolutely critical to meeting our most basic everyday needs. In the modern era, travel for work, school, leisure, and myriad other quotidian activities, including getting groceries, visiting with friends and relatives, and getting to medical appointments, are just a few of the central reasons for routine travel today. This study underscores the importance of transportation and mobility as a core aspect of human well-being, and as such, an important policy domain that should occupy a central position in the world of welfare and welfare state research. However, despite its import, transportation policy has been largely neglected in the research on well-being and welfare states. This is most strikingly evident in the research on welfare state models and typologies. This study focuses on three key dimensions of well-being, (1) inequality, (2) safety, and (3) environment, highlighting the many ways that transportation policy affects our lives, and makes a case for its inclusion as an important policy domain and component of modern welfare states. Employing Gøsta Esping-
+      Andersen’s widely-embraced welfare state/worlds typology, it examines the character of transportation policy in three cities (Kansas City, MO, US; Stockholm, Sweden; and Luxembourg City, Luxembourg), representing each of his three welfare regimes (liberal, social democratic, and conservative, respectively). It focuses on a range of key indicators of these three dimensions, including fare provision, service availability, pedestrian infrastructure, and ticketing systems for the inequality dimension; programming in infrastructure safety and reduced road access, as well as legislation for driver training and consequences for illegal acts on the road for safety dimension; and provisions of green space, parking and urban access regulations, and environmental regulations on vehicles for the environmental dimension. Its central conclusion is that future discussion and research on welfare states should consider transportation policy as a central social policy domain.
+  - title: 'The Opportunity Cost: Using a Narrative Approach to Reframe Pro-equity Urban Informatics'
+    author: Andrew Hamann and Roderick Crooks
+    journal: Companion Publication of the 2023 Conference on Computer Supported Cooperative Work and Social Computing
+    year: 2023
+    url: https://dl.acm.org/doi/pdf/10.1145/3584931.3607005
+    description: |-
+      This paper is an exploration of storytelling in an urban data dash-
+      board. We follow two frameworks to describe the narrative ele-
+      ments (characters, spatial dimension, sequentiality & temporality,
+      and tellability) of the dashboard. This narrative analysis allows us
+      to characterize the narrative work that urban dashboards do, en-
+      abling the interpretation that produces meaning from data. Given
+      the duality of data and data visualization and their primacy in both
+      directing and critiquing racialized state power, this poster argues
+      that understanding narrative is vital to determining how, when, and
+      why particular kinds of data visualizations might serve authentic
+      community-defined political goals and when they do not. We aim
+      to start a line of inquiry into how analytic attention to narrative in
+      data visualization can support political change through agonistic
+      data practices.
+  - title: 'Insights to Support Transportation Equity in Rural America: A Primer and Practical Compilation of Concepts, Resources, Tools, and Reforms'
+    author: Andrea Hamre and David Kack
+    journal: Western Transportation Institute Report
+    year: 2023
+    url: https://westerntransportationinstitute.org/wp-content/uploads/2023/08/20230817-4W9477-Final-Report.pdf
+    description: |-
+      The primary purpose of this project was to review, analyze, and compile information and resources to support transportation equity in
+      rural communities throughout the U.S. We used publicly available databases and information in the form of published reports, articles,
+      and presentations to examine the following research questions:
+      • What resources are available to support transportation equity in rural communities?
+      • What measures are available to guide the assessment of transportation equity and the prioritization of transportation
+      investments?
+      • What transportation policy and program innovations and reforms are available to support transportation equity in rural
+      communities?
+      We provide a review of key concepts (including rural, equity, mobility, and accessibility), key resources (from the Legislative and
+      Executive Branches as well as the Transportation Research Board and additional entities), measures (including tools to identify people
+      and places for equity considerations as well as tools for measuring the impact of projects), and reforms (including reforms to support
+      expanded access to travel such as universal basic mobility, and reforms to improve travel conditions such as sidewalk network
+      improvements). With this primer report, we hope rural transportation practitioners feel more informed about transportation equity
+      concepts, resources, tools, and reforms, and empowered to support transportation equity policies and programs for fairness and justice
+      in their communities.
+  - title: 'High Capacity Transit Through Merrimack Valley Corridor: Feasibility and Alternatives for Improved Transit Throughout the Region'
+    author: Henry Mulvey
+    journal: Masters Project, University of Massachusetts Amherst
+    year: 2023
+    url: https://scholarworks.umass.edu/cgi/viewcontent.cgi?article=1116&context=larp_ms_projects
+    description: |-
+      Presently, the interurban bus routes of the Merrimack Valley Regional Transit Authority (MeVa)
+      connecting Lawrence, Lowell, and Haverhill have the highest ridership of any of the routes on
+      the MeVa system. Connecting those three cities, and the surrounding suburbs and UMass
+      Lowell, with a light rail line or a bus rapid transit line, would improve the commute of the people
+      already using those bus routes and draw more residents to public transit. This project undertook
+      corridor-based alternatives and feasibility analysis that looked at a specific proposal for a high
+      capacity transit line connecting the three cities that would be beneficial to transit planning in the
+      region. Several different alignments between the three cities were studied for the routing with
+      the optimal characteristics for high transit ridership. Several GIS and other mapping analyses
+      were applied to these alignments to determine if they would provide sustainable ridership for a
+      high capacity transit service. A light rail line, or a bus rapid transit line, between Lowell,
+      Lawrence and Haverhill would significantly benefit the greater Merrimack Valley region in a
+      number of different ways.
+  - title: 'Accessibility measures in practice: A guide for transportation agencies'
+    author: Alex Karner, Kaylyn Levine, Louis Alcorn, Minyu Situ, Dana Rowangould, Kyeonsu Kim, and Ayberk Kocatepe
+    journal: NCHRP Project 08-102
+    year: 2022
+    url: https://trid.trb.org/View/2059161
+    description: No abstract
+  - title: 'Living on a fare: Modeling and quantifying the effects of fare budgets on transit access and equity'
+    author: Diego Da Silva, Willem Klumpenhouwer, and Alex Karner
+    journal: Journal of Transport Geography
+    year: 2022
+    url: https://www.sciencedirect.com/science/article/pii/S0966692322000710
+    description: While premium transit modes such as commuter rail can improve access to opportunities, the higher fares that accompany these services create barriers to their use. Fare-sensitive access measures require accurate estimation of fare costs between origins and destinations. They are not often included in public transit access analyses because of data limitations and modeling complexity. In this paper, we introduce a flexible and scalable fare calculator that encodes complex fare structures as permissions or “rules” and is able to estimate an origin-destination fare cost from a transit itinerary produced separately. We leverage this fare calculator to examine how access and equity are impacted by fares across seven major urban areas in the United States. We find that fares can act as a substantial barrier to job access, this barrier is not equitably distributed across sociodemographic groups within and between cities, and changes in transit service due to the Covid-19 pandemic has affected access disparities.
+  - title: Reallocating Washington, D.C.’s Road Space to Reduce Driving, Improve Safety, and Promote Transportation Equity
+    author: Andrew Grinberg
+    journal: Masters Project, Georgetown Univeristy
+    year: 2021
+    url: https://repository.library.georgetown.edu/bitstream/handle/10822/1078077/Andrew%20Grinberg_Capstone.pdf?sequence=1&isAllowed=y
+    description: |-
+      This study evaluates how Washington, D.C. allocates its public right-of-way, or road space, for
+      different uses - travel lanes, parking, bike lanes, and sidewalks. How a city manages its single
+      largest public space asset (its streets and sidewalks), impacts its character and performance,
+      including transportation mode shares, traffic safety, and access for its residents, workers, and
+      visitors. These metrics are critical, as the U.S. transportation system is the largest (and growing)
+      source of greenhouse gas emissions, causes roughly 40,000 deaths a year, and is a key
+      determinant of economic and social mobility. This project utilizes publicly accessible datasets,
+      analyzed in ArcGIS Pro to explore the distribution of road space allocations at the census tract
+      level across D.C.’s geography and by demographic indicators to evaluate how and where road
+      space allocations could be altered to advance existing policy goals for commute mode shares,
+      traffic safety and transportation equity. This project finds that D.C.’s road space allocation could
+      be altered to better support District initiatives to reduce driving commute mode share, reduce
+      fatal and serious injury traffic crashes and the equitable distribution of pedestrian and bike-
+      oriented streets. This study makes the case that to further its stated policy goals, D.C. should use
+      geographically targeted road space reallocation strategies to shift auto-oriented road space
+      toward more active transportation uses.
+  - title: A Comprehensive Transit Accessibility and Equity Dashboard
+    author: Willem Klumpenhouwer, Jeff Allen, Lisa Li, Rick Liu, Mitchell Robinson, Diego Da Silva, Steven Farber, Alex Karner, Dana Rowangould, Mary Buchanan, and Steven Higashide
+    journal: Findings
+    year: 2021
+    url: https://findingspress.org/article/25224-a-comprehensive-transit-accessibility-and-equity-dashboard
+    description: The TransitCenter Equity Dashboard tracks how well public transit systems in seven densely populated urban regions in the United States serve their riders and how changes to transit service affect riders over space, time, and cost constraints. The dashboard presents a series of charts and interactive maps that can be used to evaluate variations in transit accessibility and equity. It was created using publicly available data and primarily open-source software. All measures can be accessed by users seeking to conduct their own analyses. Results demonstrate differences in agency responses to COVID-19 as well as baseline transit service levels provided to different demographic groups.
+
